@@ -1,1 +1,3 @@
 # Thesis_Code
+En el Codigo de Analisis de espumas en 2D genero histogramas de distribuciones de tamaño a partir de mediciones de espumas en 2D, en donde se colocan en una carpeta y se quedan ordenados de forma temporal, de esta forma se puede observar el cambio de la distribucion a lo largo del tiempo.
+En el de Analisis de espumas en 3D a partir de curvas de Intensidad vs tiempo, en un principio las grafico para saber que mediciones son validas y luego hago un promedio de todas las curvas que quedan, calculo el error cuadrático medio para ver si alguna se aleja mucho de la promedio y poder quitarla o analizarla mas adelante.
