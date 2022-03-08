@@ -29,9 +29,6 @@ Name = 'Result of ' + Excl + '.tif:'
 #Generamos unos vectores para usar en el for
 Promedios = []
 Contador = []
-#Para poder graficar en log es necesario que las barras crezcan tambien de esa forma
-#X = 1.005 * np.linspace(1, 50, 50)
-#X = 1*np.logspace(np.log10(0.01),np.log10(0.5), 30)
 #Va eligiendo los distintos sets de datos, hace un histograma y lo guarda
 for x in range(1,F):
     y = str(x)
@@ -44,17 +41,10 @@ for x in range(1,F):
     Promedios.append(Prom)
     newdf1 = newdf.loc[:, ['Area']] / Prom
     newdf1['Area'] = np.log(newdf1['Area'])
-    #newdf2 = newdf.loc[:, ['Area']]
-    #newdf2['Area'] = np.log(newdf2['Area'])
-    #plt.figure()
-    #plt.subplot(211)
     newdf1.hist('Area', density = True, bins = 25)
     plt.ylim(0, 0.5)
     plt.ylabel('N° de burbujas/N° de Burbujas total ')
     plt.xlabel('log(A/<A>)')
-    #plt.subplot(212)
-    #newdf2.hist('Area', density = True, bins = 20)
-    #plt.ylim(0, 0.5)
     plt.savefig(os.path.join(Dir, Img))
     plt.cla()
     plt.close()
