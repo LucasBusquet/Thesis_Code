@@ -5,7 +5,7 @@ import os
 import tkinter as tk
 from tkinter import filedialog
 import glob
-#import scipy.stats as statsx
+
 #Tkinter es para poder elegir la carpeta con una ventanita
 Folder = tk.filedialog.askdirectory()
 #Seteo el directorio de trabajo como el que eleji con el tkinter
@@ -93,7 +93,6 @@ for i in range(Contar):
 	Err[i] = Errores
 	Contador = 0
 print("0")
-#df1['Errores'] = Err
 N_muestra = np.linspace(1, Contar, Contar)
 figure, axis = plt.subplots(1, 2)
 axis[1].plot(N_muestra, Err, "1")
